@@ -1,18 +1,16 @@
 class Curso {
     tipo: string;
-    modalidad: string;
-    horario: string;
+    descripcion: string;
     alumnos: Alumno[] = [];
 
-    constructor(tipo: string, modalidad: string, horario: string) {
+    constructor(tipo: string, descripcion: string,) {
         this.tipo = tipo;
-        this.modalidad = modalidad;
-        this.horario = horario;
+        this.descripcion = descripcion;
     }
 
     addAlumno(alumno: Alumno): boolean {
         if (this.alumnos.find(item => item.dni === alumno.dni)) {
-            console.error("El DNI existe")
+            alert("El DNI existe")
             return false;
         } else {
             this.alumnos.push(alumno);

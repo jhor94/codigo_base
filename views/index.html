@@ -8,31 +8,28 @@
 
 <body>
     <div id="allbody" class="container">
-        <h1>Ejercicio Cursos universitarios</h1>
+        <h1>Cursos Universitarios</h1>
         <div id="create-Curso-form">
 
             <div class="row">
 
                 <div class="col">
                     <label for="tipoInput" class="form-label">Tipo de curso</label>
-                    <input type="text" class="form-control" placeholder="Marketing" id="tipoInput">
+                    <input type="text" class="form-control" id="tipoInput">
+                    <div id="errorTipo" class="invalid-feedback">El campo tipo de curso es obligatorio</div>
                 </div>
 
                 <div class="col">
-                    <label for="horarioInput" class="form-label">Horario</label>
-                    <input type="text" class="form-control" placeholder="mañana" id="horarioInput">
-                </div>
-
-                <div class="col">
-                    <label for="modalidadInput" class="form-label">Modalidad</label>
-                    <input type="text" class="form-control"  placeholder="online" id="modalidadInput">
+                    <label for="descripcionInput" class="form-label">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcionInput">
+                    <div id="errordescripcion" class="invalid-feedback">El campo descripcion es obligatorio</div>
                 </div>
 
             </div>
 
-            <div class="row mt-3">
-                <div class="col">
-                    <button type="submit" class="btn btn-primary mb-2" onclick="submitCurso()">Create Curso</button>
+            <div class="row mt-3 ">
+                <div class="col d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mb-2" onclick="submitCurso()">Crear Curso</button>
                 </div>
             </div>
         </div>
@@ -45,49 +42,41 @@
                 <div class="col">
                     <label for="horarioAlumno1" class="form-label">Nombre Alumno</label>
                     <input type="text" class="form-control"  placeholder="jose" id="nombreAlumno1">
+                    <div id="errorAlumno" class="invalid-feedback">El campo alumno es obligatorio</div>
                 </div>
 
                 <div class="col">
                     <label for="nacimientoAlumno1" class="form-label">DNI</label>
                     <input type="text" class="form-control"  placeholder="33546" id="dniAlumno1">
+                    <div id="errorAlumno" class="invalid-feedback">El campo DNI es obligatorio</div>
                 </div>
 
                 
                 <div class="col">
                     <label for="nacimientoAlumno1" class="form-label">Fecha de nacimiento</label>
                     <input type="date" class="form-control" id="nacimientoAlumno1">
+                    <div id="errorAlumno" class="invalid-feedback">La fecha de nacimiento es obligatoria</div>
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col">
+                    <div class="col d-flex justify-content-center">
                         <button type="submit" class="btn btn-primary mb-2" onclick="submitAlumnoForm()()">Crear Alumno</button>
                     </div>
                 </div>
 
             </div>
 
-
-
-
         <div id="result-Curso-form"> 
 
             <div class="row">
-
-                <div class="col create-Curso-output">
-                    <p id="CursoTitle"></p>
+                <div class="create-Curso-output">
+                    <h2 id="CursoTitle"></h2>
+                    <h3 id="tipoOutput"></h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col create-Curso-output">
-                    <p id="tipoOutput"><p>
-                </div>
-
-                <div class="col create-Curso-output">
-                    <p id="horarioOutput"></p>
-                </div>
-
-                <div class="col create-Curso-output">
-                    <p id="modalidadOutput"></p>
+                    <p id="descripcionOutput"></p>
                 </div>
 
                 <div class="col create-Curso-output"></div>
@@ -95,7 +84,6 @@
             </div>
 
         </div>
-
 
         <div id="result-alumnos-form">
 

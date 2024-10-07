@@ -1,14 +1,13 @@
 "use strict";
 var Curso = /** @class */ (function () {
-    function Curso(tipo, modalidad, horario) {
+    function Curso(tipo, descripcion) {
         this.alumnos = [];
         this.tipo = tipo;
-        this.modalidad = modalidad;
-        this.horario = horario;
+        this.descripcion = descripcion;
     }
     Curso.prototype.addAlumno = function (alumno) {
         if (this.alumnos.find(function (item) { return item.dni === alumno.dni; })) {
-            console.error("El DNI existe");
+            alert("El DNI existe");
             return false;
         }
         else {
